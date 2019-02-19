@@ -1,0 +1,38 @@
+.centered-over-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .image-container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  .frame {  
+    height: 100vh; /*can be anything*/
+    width: 100vw; /*can be anything*/
+    position: relative;
+}
+img {  
+    max-height: 100%;  
+    max-width: 100%; 
+    width: auto;
+    height: auto;
+    position: absolute;  
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    margin: auto;
+}
+.rotate {
+    -webkit-animation:spin .8s linear infinite;
+    -moz-animation:spin .8s linear infinite;
+    animation:spin .8s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(720deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(720deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(720deg); transform:rotate(720deg); } }

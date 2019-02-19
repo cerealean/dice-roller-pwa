@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,31 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'DiceRollerPWA';
+  public numberToDisplay: number;
+  public isMenuOpen = false;
+  public showNumber = true;
+  
+  @ViewChild('die') dieImage: ElementRef;
+
+  constructor() {
+    this.getRandomIntInclusive(1,20);
+  }
+
+  public getRandomIntWithAnimation() {
+    this.showNumber = false;
+    const element = <HTMLImageElement> this.dieImage.nativeElement;
+    element.classList.add('rotate');
+    setTimeout(() => {
+      this.getRandomIntInclusive(1,20);
+      element.classList.remove('rotate');
+      this.showNumber = true;
+    }, 400)
+  }
+
+  private getRandomIntInclusive(min: number, max: number) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    this.numberToDisplay = Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
 }
