@@ -9,9 +9,9 @@ if (environment.production) {
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule).then(() => {
-  const browserHasServiceWorkerEnabled = 'serviceWorker' in navigator;
-  if (browserHasServiceWorkerEnabled && environment.production) {
-    navigator.serviceWorker.register('/ngsw-worker.js');
-    console.log('Called service worker register');
-  }
+  // const browserHasServiceWorkerEnabled = 'serviceWorker' in navigator;
+  // if (browserHasServiceWorkerEnabled && environment.production) {
+  //   navigator.serviceWorker.register('/ngsw-worker.js');
+  //   console.log('Called service worker register');
+  // }
 }).catch(err => console.log(err));
