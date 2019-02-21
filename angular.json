@@ -67,7 +67,22 @@
                 }
               ],
               "serviceWorker": true,
-              "ngswConfigPath": "src/ngsw-config.json"
+              "ngswConfigPath": "src/ngsw-config.json",
+              "assets": [
+                "src/favicon.ico",
+                "src/favicon-16x16.png",
+                "src/favicon-32x32.png",
+                "src/mstile-150x150.png",
+                "src/safari-pinned-tab.svg",
+                "src/browserconfig.xml",
+                "src/apple-touch-icon.png",
+                "src/android-chrome-192x192.png",
+                "src/android-chrome-384x384.png",
+                "src/assets",
+                "src/site.webmanifest.json",
+                "src/browserslist",  
+                "src/.htaccess"
+              ]
             }
           }
         },

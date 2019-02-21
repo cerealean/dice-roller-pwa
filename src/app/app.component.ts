@@ -9,22 +9,22 @@ export class AppComponent {
   public numberToDisplay: number;
   public isMenuOpen = false;
   public showNumber = true;
-  
+
   @ViewChild('die') dieImage: ElementRef;
 
   constructor() {
-    this.getRandomIntInclusive(1,20);
+    this.getRandomIntInclusive(1, 20);
   }
 
   public getRandomIntWithAnimation() {
     this.showNumber = false;
-    const element = <HTMLImageElement> this.dieImage.nativeElement;
+    const element = this.dieImage.nativeElement as HTMLImageElement;
     element.classList.add('rotate');
     setTimeout(() => {
-      this.getRandomIntInclusive(1,20);
+      this.getRandomIntInclusive(1, 20);
       element.classList.remove('rotate');
       this.showNumber = true;
-    }, 400)
+    }, 400);
   }
 
   private getRandomIntInclusive(min: number, max: number) {
