@@ -1,0 +1,25 @@
+<div class="modal" [class.is-active]="isOpen">
+  <div class="modal-background" (click)="close()"></div>
+  <div class="modal-content is-clipped">
+    <div class="box has-text-centered">
+      <div *ngIf="isiOS">
+        <h1 class="title">iOS</h1>
+        <h3 class="subtitle">
+          Please open your menu and click <strong>"Add to Home Screen"</strong> to install this page as an application.
+          See below for reference:
+        </h3>
+        <figure class="image">
+          <img src="../../assets/images/ios_install.jpg" alt="iOS Install Example" />
+        </figure>
+      </div>
+      <div *ngIf="!isiOS">
+        <h1 class="title">Unable To Install</h1>
+        <h3 class="subtitle">
+          Unfortunately, we believe that your device or browser does not allow installation. Please upgrade your device
+          or browser to enable these features.
+        </h3>
+      </div>
+    </div>
+  </div>
+  <button class="modal-close is-large" aria-label="close" (click)="close()"></button>
+</div>

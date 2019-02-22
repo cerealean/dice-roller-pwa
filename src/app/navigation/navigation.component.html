@@ -1,0 +1,37 @@
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item">
+        <h1 class="title">Dice Roller</h1>
+      </a>
+  
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+        data-target="navbarBasicExample" [class.is-active]="isMenuOpen" (click)="isMenuOpen = !isMenuOpen">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu" [class.is-active]="isMenuOpen">
+      <div class="navbar-start">
+        <a class="navbar-item" routerlink="/">
+          Roll A D20
+        </a>
+      </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item" *ngIf="!isLaunchedFromHomeScreen">
+          <button class="button is-info" (click)="installLocal()">Add to Home Screen</button>
+        </div>
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-success" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=WNPQYJE4WRW4C&currency_code=USD&source=url" rel="noopener" target="_blank">
+              <strong>Donate</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <install-instructions-modal #installInstructions></install-instructions-modal>

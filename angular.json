@@ -34,7 +34,8 @@
               "src/android-chrome-384x384.png",
               "src/assets",
               "src/site.webmanifest.json",
-              "src/browserslist"
+              "src/browserslist",
+              "src/googleefb859c8f1ab46ff.html"
             ],
             "styles": [
               "src/styles.scss"
@@ -81,7 +82,8 @@
                 "src/assets",
                 "src/site.webmanifest.json",
                 "src/browserslist",  
-                "src/.htaccess"
+                "src/.htaccess",
+                "src/googleefb859c8f1ab46ff.html"
               ]
             }
           }

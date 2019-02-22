@@ -1,2 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-@import '../node_modules/bulma/bulma.sass';
+
+@import '../node_modules/bulma/sass/utilities/_all.sass';
+@import '../node_modules/bulma/sass/elements/box.sass';
+@import '../node_modules/bulma/sass/elements/button.sass';
+@import '../node_modules/bulma/sass/elements/title.sass';
+@import '../node_modules/bulma/sass/elements/image.sass';
+@import '../node_modules/bulma/sass/elements/container.sass';
+@import '../node_modules/bulma/sass/base/generic.sass';
+@import '../node_modules/bulma/sass/base/helpers.sass';
+@import '../node_modules/bulma/sass/components/modal.sass';
+@import '../node_modules/bulma/sass/components/navbar.sass';

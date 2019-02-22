@@ -7,7 +7,6 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 })
 export class AppComponent {
   public numberToDisplay: number;
-  public isMenuOpen = false;
   public showNumber = true;
 
   @ViewChild('die') dieImage: ElementRef;
