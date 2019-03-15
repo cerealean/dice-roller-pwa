@@ -1,6 +1,6 @@
 <app-navigation></app-navigation>
 
 <div class="frame">
-  <img src="../assets/images/blankd20transparent.png" alt="D20 Die" (click)="getRandomIntWithAnimation()" #die />
-  <span class="centered-over-image is-size-1" (click)="getRandomIntWithAnimation()" *ngIf="showNumber">{{numberToDisplay}}</span>
+  <img src="../assets/images/blankd20transparent.png" alt="D20 Die" (click)="rollDie()" #die />
+  <span class="centered-over-image is-size-1" (click)="rollDie()" *ngIf="showNumber">{{numberToDisplay}}</span>
 </div>

@@ -15,7 +15,12 @@ export class AppComponent {
     this.getRandomIntInclusive(1, 20);
   }
 
-  public getRandomIntWithAnimation() {
+  public rollDie() {
+    this.getRandomIntWithAnimation();
+    this.sendGoogleAnalyticsEvent('d20', 1);
+  }
+
+  private getRandomIntWithAnimation() {
     this.showNumber = false;
     const element = this.dieImage.nativeElement as HTMLImageElement;
     element.classList.add('rotate');
@@ -32,4 +37,11 @@ export class AppComponent {
     this.numberToDisplay = Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
+  private sendGoogleAnalyticsEvent(dieRolled: string, numberOfDiceRolled: number) {
+    const ga = (window as any).gtag;
+    ga('event', 'Dice Roll', {
+      event_category: dieRolled,
+      value: numberOfDiceRolled
+    });
+  }
 }
